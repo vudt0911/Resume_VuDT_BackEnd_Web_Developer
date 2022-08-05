@@ -9,3 +9,7 @@ root.render(
     <App />
   </React.StrictMode>
 );
+
+root.listen(process.env.PORT || 3000, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, root.settings.env);
+});
